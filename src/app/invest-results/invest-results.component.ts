@@ -1,19 +1,15 @@
-import { Component, Input } from '@angular/core';
-
+import { Component } from '@angular/core';
+import { InvestmentService } from '../investment.service';
 @Component({
   selector: 'app-invest-results',
-  standalone: true,
-  imports: [],
   templateUrl: './invest-results.component.html',
   styleUrl: './invest-results.component.css'
 })
 export class InvestResultsComponent {
-  @Input() results? :{year: number;
-    interest: number,
-    valueEndOfYear: number,
-    annualInvestment: number,
-    totalInterest: number,
-    totalAmountInvested: number,
- }[]
+ constructor(private investmentservice : InvestmentService){
 
+ }
+get results(){
+ return this.investmentservice.resultsData;
+}
 }

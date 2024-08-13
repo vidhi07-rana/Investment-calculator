@@ -1,35 +1,61 @@
+/* Centered Content */
 .center {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
-    color: #555;
-  }
-  
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #666; /* Slightly darker color for better contrast */
+  font-family: 'Arial', sans-serif; /* Added a font-family for consistency */
+}
+
+/* Responsive Table */
+table {
+  width: 100%; /* Full-width for better responsiveness */
+  max-width: 1200px; /* Limits the maximum width */
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Table Header */
+th, td {
+  border: 1px solid #ccc; /* Lighter border color */
+  padding: 12px; /* Increased padding for better spacing */
+  text-align: center;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase; /* Makes header text uppercase */
+  letter-spacing: 1px; /* Adds spacing between letters for better readability */
+}
+
+/* Table Body Hover Effect */
+tbody tr:hover {
+  background-color:  #307e63; /* Softer hover effect */
+}
+
+/* Flexbox Centered Container */
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px; /* Adds padding around the container */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
   table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
+      width: 100%; /* Adjusts table to be fully responsive */
   }
-  
+
   th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
+      padding: 10px; /* Adjusts padding for smaller screens */
   }
-  
-  th {
-    background-color: #4CAF50;
-    color: white;
-    font-weight: bold;
-  }
-  
 
-  
-
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  .center {
+      font-size: 16px; /* Smaller font size for smaller screens */
   }
-  
+}
